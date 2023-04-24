@@ -16,14 +16,6 @@
 .header .more-inf {
   font-family: fantasy, cursive;
 }
-
-@media (max-width: 768px) {
-
-  .header { 
-    text-align: center;
-  }
-
-}
 .main-page {
   display: block;
   width: 500px;
@@ -41,14 +33,15 @@ ul {
   margin:0;
   padding: 0px;
 }
-li, h3 {
+li,
+h3 {
   list-style: none;
 }
-input,
-button {
+input {
   outline: none;
 }
 button {
+  outline: none;
   background: none;
   border: 0px;
   color: #888;
@@ -69,6 +62,7 @@ label[for='new-task'] {
   border-bottom: 2px solid #333;
   padding: 30px 0 10px;
   margin: 0;
+  display: block;
   text-transform: uppercase;
 }
 input[type="text"] {
@@ -85,14 +79,6 @@ input[type="text"] {
 }
 input[type="text"]:focus {
   color: #333;
-}
-/* New Task */
-label[for='new-task'] {
-  display: block;
-  margin: 0 0 20px;
-}
-#new-task {
-  width: 318px;
 }
 /* Task list */
 li {
@@ -132,13 +118,18 @@ li > input[type="text"] {
   color: #888;
 }
 /* Edit Task */
-ul li input[type=text] {
+ul li input[type=text],
+.edit-mode label {
   display: none
 }
 .edit-mode input[type=text] {
   display: inline-block;
   width: 224px;
 }
-.edit-mode label {
-  display: none;
-}
+@media (max-width: 768px) {
+
+    .header { 
+      text-align: center;
+    }
+  
+  }
